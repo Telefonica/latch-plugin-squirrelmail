@@ -2,13 +2,13 @@
 
 #### PREREQUISITES ####
 
-* RoundCube version 1.4.22 or later.
+* SquirrelMail version 1.4.22 or later.
 
 * Curl extensions active in PHP (uncomment "extension=php_curl.dll" or" extension=curl.so" in Windows or Linux php.ini respectively.
 
 * To get the "Application ID" and "Secret", (fundamental values for integrating Latch in any application), it’s necessary to register a developer account in Latch's website: https://latch.elevenpaths.com. On the upper right side, click on "Developer area".
 
-#### INSTALLING THE MODULE IN ROUNDCUBE ####
+#### INSTALLING THE MODULE IN SQUIRRELMAIL ####
 
 1. Once the administrator has downloaded the plugin, it has to be added to the SquirrelMail plugins directory. Extract the 'latch' folder from the ZIP file and copy it to SQUIRRELMAIL_INSTALLATION_DIR/plugins.
 
