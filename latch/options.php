@@ -30,9 +30,9 @@ $latchVariables = array();
 if (isset($_POST['pairingToken']) || isset($_POST['unpair'])) {
     $formProcessingOk = processForm();
     if ($formProcessingOk) {
-        $latchVariables['notificationMessage'] = _("Operation performed succesfully") . '.';
+        $latchVariables['notificationMessage'] = getNotificationMessage();
     } else {
-        $latchVariables['errorMessage'] = _("Error performing the operation") . '.';
+        $latchVariables['errorMessage'] = getErrorMessage();
     }
 }
 
@@ -45,6 +45,22 @@ function processForm() {
         return pairAccount();
     } elseif (isset($_POST['unpair'])) {
         return unpairAccount();
+    }
+}
+
+function getNotificationMessage() {
+    if (isset($_POST['pairingToken'])) {
+        return _("Account paired succesfully.");
+    } elseif (isset($_POST['unpair'])) {
+        return _("Account unpaired succesfully");
+    }
+}
+
+function getErrorMessage() {
+    if (isset($_POST['pairingToken'])) {
+        return _("The account has not been paired succesfully.");
+    } elseif (isset($_POST['unpair'])) {
+        return _("The account could not be unpaired.");
     }
 }
 
